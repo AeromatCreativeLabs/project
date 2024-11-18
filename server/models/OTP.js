@@ -25,7 +25,7 @@ async function sendVerification (email,otp) {
      try {
           
           const response = await mailsender(email, "verification code for signup", otpTemplate(otp));
-          console.log("response is for verifiaction is ", response);
+          // console.log("response is for verifiaction is ", response);
      } catch (error) {
           
           console.log("error at verification of otp");

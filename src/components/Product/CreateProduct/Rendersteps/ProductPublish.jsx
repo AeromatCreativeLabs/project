@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { resetProductState, setStep } from '../../../../features/productSlice';
+import { resetProductState, setEditProduct, setStep } from '../../../../features/productSlice';
 import { useForm } from 'react-hook-form';
 import { PRODUCT_STATUS } from '../../../../utils/constant';
 import toast from 'react-hot-toast';
@@ -91,6 +91,7 @@ const ProductPublish = () => {
       console.log(" result is not -->>> edit is: ", result);
       setLoading(false);
       goAndSubmit();
+      navigate('/');
 }
 
     

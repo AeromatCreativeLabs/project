@@ -5,7 +5,7 @@ import { IoIosArrowDroprightCircle } from 'react-icons/io';
 import { FaMinus, FaPlus, FaRegShareFromSquare } from 'react-icons/fa6';
 import copy from 'copy-to-clipboard';
 import toast from 'react-hot-toast';
-import ReactImageMagnify from 'react-image-magnify';
+// import ReactImageMagnify from 'react-image-magnify';
 import { ACCOUNT_TYPE, PRODUCT_STATUS } from '../../utils/constant';
 import BuyProduct from './BuyProduct';
 import { useSelector } from 'react-redux';
@@ -72,8 +72,8 @@ const ViewProduct = () => {
                 <div className='w-full md:w-[80%] flex flex-col md:flex-row items-start gap-10 py-8 px-4 md:px-8 bg-gray-800 text-white rounded-xl'>
                     <div>
                           <div className='lg:w-[400px]    mb-10'>
-                            {/* <img src= alt={`product-image-${image}`}  className='w-full'/> */}
-                            <ReactImageMagnify {...{
+                            <img src={imageList[image]} alt={`product-image-${image}`}  className='w-[480px]'/>
+                            {/* <ReactImageMagnify {...{
                               smallImage: {
                                   alt: 'Wristwatch by Ted Baker London',
                                   isFluidWidth: true,
@@ -85,7 +85,7 @@ const ViewProduct = () => {
                                   height: 800,
                                   enlargedImagePosition: "besides"
                               }
-                          }} />
+                          }} /> */}
                           </div>
 
                           <div className='flex flex-row gap-3 '>

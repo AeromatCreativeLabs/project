@@ -101,7 +101,7 @@ const Navbar = () => {
                         services.map((item,index)=>(
                             <li className=' hover:bg-slate-800 rounded-lg hover:text-white ' key={index}>
                                 <NavLink  to={`/our-services/${item.id}`}>
-                                    <p className='w-full font-medium text-center text-sm '>{`${item.name.substring(0,15)}...`}</p>
+                                    <p className='w-full font-medium text-center text-sm '>{`${item.subname}`   }</p>
                                 </NavLink>
                             </li>
                         ))
@@ -111,7 +111,7 @@ const Navbar = () => {
 
             </div>
         </li>
-        {(user!==null && user.accountType===ACCOUNT_TYPE.ADMIN)&& <NavLink  to={`/product/${selectedCategory}`}>
+        {(user!==null && user.accountType===ACCOUNT_TYPE.ADMIN && selectedCategory!=null)&& <NavLink  to={`/product/${selectedCategory}`}>
         <li className='cursor-pointer  hover:text-blue-400 transition-all duration-300 group  px-2  py-5  relative'>
            
                 Products
@@ -166,7 +166,7 @@ const Navbar = () => {
                                 services.map((item,index)=>(
                                     <li className=' hover:bg-slate-800 rounded-lg hover:text-white ' key={index}>
                                         <NavLink  to={`/our-services/${item.id}`}>
-                                            <p className='w-full font-medium text-center text-sm '>{`${item.name.substring(0,15)}...`}</p>
+                                            <p className='w-full font-medium text-center text-sm '>{`${item.subname}`}</p>
                                         </NavLink>
                                     </li>
                                 ))
@@ -176,11 +176,11 @@ const Navbar = () => {
 
                     </div>
                 </li>
-                <li className=' hover:bg-gray-400 rounded-md w-full text-center hover:text-white'>
+                {(user!==null && user.accountType===ACCOUNT_TYPE.ADMIN && selectedCategory!=null) && <li className=' hover:bg-gray-400 rounded-md w-full text-center hover:text-white'>
                     <NavLink  to={`/product/${selectedCategory}`}>
                         Products
                     </NavLink>
-                </li>
+                </li>}
                 <li className=' hover:bg-gray-400 rounded-md w-full text-center hover:text-white'> 
                     <NavLink  to={"/consultancy"}>
                         Consultancy

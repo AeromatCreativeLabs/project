@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { getAllCategories, updateCategory } from '../../../services/operations/categoryApi';
 import { useDispatch, useSelector } from 'react-redux';

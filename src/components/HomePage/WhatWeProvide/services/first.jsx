@@ -13,6 +13,7 @@ export const services = [
      // updated
   id: "services12341",
   name: "Design, Manufacturing & Assembly of Ready to Fly Drones",
+  subname: "Manufacturing",
   size: "w-1/3  mx-auto rounded-full object-center",
   image:  image1,
   intro: "Drone customization provides a powerful way to tailor aerial solutions to specific needs and applications.Customization of various components such as sensors, cameras and flight systems allows the drones to meet the precise requirements of different industries, from agriculture and survey to search and rescue. Personalization does not only maximize the drone utility but also empowers businesses and individuals to achieve optimum results in their required personal environment.",
@@ -32,6 +33,7 @@ export const services = [
 {
     id: "services12342",
     name: " LiDAR (Light Detection and Ranging Services)",
+    subname: "LiDAR",
     size: "w-1/2 mx-auto rounded-full object-center",
     intro: "In the world dominated by visual media, aerial photography and First Person View (FPV) cinematic shoots have proven to be powerful tools for capturing breathtaking images that were once beyond reach. With the help of cutting-edge drone technology and high-resolution cameras, we specialize in delivering stunning aerial visuals that can transform ordinary scenes into extraordinary experiences. Whether showcasing scenic landscapes, documenting events, or highlighting architectural marvels, our aerial photography and FPV shoots offer a unique perspective that redefines visual storytelling.",
     image:  image2,
@@ -51,6 +53,7 @@ export const services = [
 {
      id: "services12343",
      name: "Cutting Edge UAV Imagery Processing",
+     subname: "Imagery Processing",
      size: "w-1/3  mx-auto rounded-full object-center",
      image:  image3,
      intro: "In the world dominated by visual media, aerial photography and First Person View (FPV) cinematic shoots have proven to be powerful tools for capturing breathtaking images that were once beyond reach. With the help of cutting-edge drone technology and high-resolution cameras, we specialize in delivering stunning aerial visuals that can transform ordinary scenes into extraordinary experiences. Whether showcasing scenic landscapes, documenting events, or highlighting architectural marvels, our aerial photography and FPV shoots offer a unique perspective that redefines visual storytelling.",
@@ -70,6 +73,7 @@ export const services = [
 {
      id: "services12344",
      name: " Extremely Accurate Land Survey Services",
+     subname: "Land Survey",
      size: "w-1/3  mx-auto rounded-full object-center",
      image:  image4,
      intro: "In the world dominated by visual media, aerial photography and First Person View (FPV) cinematic shoots have proven to be powerful tools for capturing breathtaking images that were once beyond reach. With the help of cutting-edge drone technology and high-resolution cameras, we specialize in delivering stunning aerial visuals that can transform ordinary scenes into extraordinary experiences. Whether showcasing scenic landscapes, documenting events, or highlighting architectural marvels, our aerial photography and FPV shoots offer a unique perspective that redefines visual storytelling.",
@@ -90,6 +94,7 @@ export const services = [
 {
      id: "services12345",
      name: " Industry Leading Photogrammetric Services",
+     subname: "Photogrammetric Services",
      size: "w-1/3  mx-auto rounded-full object-center",
      image:  image5,
      intro: "In the world dominated by visual media, aerial photography and First Person View (FPV) cinematic shoots have proven to be powerful tools for capturing breathtaking images that were once beyond reach. With the help of cutting-edge drone technology and high-resolution cameras, we specialize in delivering stunning aerial visuals that can transform ordinary scenes into extraordinary experiences. Whether showcasing scenic landscapes, documenting events, or highlighting architectural marvels, our aerial photography and FPV shoots offer a unique perspective that redefines visual storytelling.",
@@ -109,6 +114,7 @@ export const services = [
 {
      id: "services12346",
      name: "Advanced Architectural Service",
+     subname: "Architectural Service",
      size: "w-1/4 mx-auto rounded-full object-center mt-2 ",
      image:  image6,
      intro: "In the world dominated by visual media, aerial photography and First Person View (FPV) cinematic shoots have proven to be powerful tools for capturing breathtaking images that were once beyond reach. With the help of cutting-edge drone technology and high-resolution cameras, we specialize in delivering stunning aerial visuals that can transform ordinary scenes into extraordinary experiences. Whether showcasing scenic landscapes, documenting events, or highlighting architectural marvels, our aerial photography and FPV shoots offer a unique perspective that redefines visual storytelling.",
@@ -128,6 +134,7 @@ export const services = [
 {
      id: "services12347",
      name: " Geographic Information System",
+     subname: "GIS",
      size: "w-1/3 mx-auto rounded-full object-center ",
      image:  image7,
      intro: "In the world dominated by visual media, aerial photography and First Person View (FPV) cinematic shoots have proven to be powerful tools for capturing breathtaking images that were once beyond reach. With the help of cutting-edge drone technology and high-resolution cameras, we specialize in delivering stunning aerial visuals that can transform ordinary scenes into extraordinary experiences. Whether showcasing scenic landscapes, documenting events, or highlighting architectural marvels, our aerial photography and FPV shoots offer a unique perspective that redefines visual storytelling.",
@@ -149,6 +156,7 @@ export const services = [
      // updated
      id: "services12348",
      name: "Crop Health Analysis",
+     subname: "Crop Health",
      size: "w-1/3 mx-auto rounded-full object-center",
      image:  image8,
      intro: "Crop health analysis using drones plays a revolutionary role in  modern agriculture by offering precise and real-time insights into plant conditions. Our drones are equipped with advanced sensors and cameras that can capture high-resolution aerial images and multispectral data to monitor crop vitality, detect early signs of infection, and assess overall crop health and performance. With this advanced technology,farmers are able to identify essential factors such as nutrient deficiencies, water shortages, or pest infestations with unparalleled accuracy. By integrating drone-collected data and knowledge by agricultural professionals, decisions can be made to optimize crop management, increase yields, and reduce resource waste, ultimately driving more sustainable and efficient farming practices.",

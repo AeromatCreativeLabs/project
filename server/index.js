@@ -10,7 +10,7 @@ app.use(
 
 // fetching data from  .env
 require("dotenv").config();
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 8000;
 
 // cookie parser
 const cookieParser = require("cookie-parser");
