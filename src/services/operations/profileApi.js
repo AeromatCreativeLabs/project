@@ -5,7 +5,7 @@ import {settingEndpoints} from "../apis"
 
 const {UPDATE_PROFILE_API,CHANGE_PASSWORD_API,DELETE_PROFILE_API} = settingEndpoints;
 
-export function updateProfile(data,token){
+export function updateProfile(data,token,navigate){
 
     return async(dispatch)=>{
         const toastId = toast.loading("loading...");
@@ -26,6 +26,7 @@ export function updateProfile(data,token){
             // working here
             dispatch(setUser(response.data.data));
             toast.success("Upload of profile is successfully done");
+            navigate("/dashboard/my-profile");
 
         } catch (error) {
             toast.error("update of profile is failed while process..");

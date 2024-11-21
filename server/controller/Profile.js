@@ -11,24 +11,28 @@ exports.updateProfile = async(req,res)=>{
         // fetch the user id
         const user_id = req.user.id;
         // fetch the data from body
-        const {phoneNumber,gender,DOB="", address}  = req.body;
-        console.log("user_id", phoneNumber);
+        const updates  = req.body;
         
         // db call for user
         const userDetails = await User.findById(user_id);
         console.log("userDetails", userDetails);
         // call the profile of the user
-        const accountDetailsUser = await Profile.findByIdAndUpdate(userDetails.accountDetails,
-            {
-                phoneNumber,
-                gender,
-                DOB,
-                address
-            },
-            {new:true}
-        );
+        const accountDetailsUser = await Profile.findById(userDetails.accountDetails);
+        for (const key in updates) {
+            if (updates.hasOwnProperty(key)) {
+              if (key === "tag" || key === "instructions") {
+                accountDetailsUser[key] = JSON.parse(updates[key])
+              } else {
+                accountDetailsUser[key] = updates[key]
+              }
+            }
+          }
+          await accountDetailsUser.save();
         console.log("updated account details", accountDetailsUser);
+
+
         userDetails.accountDetails = accountDetailsUser;
+          await userDetails.save();
 
         return res.status(200).json({
             success:true,
