@@ -1,7 +1,7 @@
 const { default: mongoose } = require("mongoose");
 const User = require("../models/User")
 const mailsender = require("../utils/sendMail");
-const randn = require('randn');
+const randn = require('randomstring');
 const { paymentSuccessEmail } = require("../mail/paymentSuccessEmail");
 const paymentStatus = require("../models/PayStatus");
 const Products = require("../models/Products");
@@ -25,7 +25,7 @@ exports.capturePayment = async(req,res)=>{
             }
         }
         // console.log(result);
-        const invoice = randn(20);
+        const invoice = randn.generate(15);
 
         const user = await User.findById(userId);
 
