@@ -65,7 +65,7 @@ const ProductCategory = () => {
                   <div className=' xl:w-[280px]  lg:w-[200px]'>
                       {
                         element?.subCategory?.map((tag,index)=>(
-                          <div  key={index} className={` ${selectedCategory === tag._id ? "bg-gray-800": " bg-yellow-800"}
+                          <div  key={index} className={` ${selectedCategory === tag._id ? "bg-gray-500": " bg-blue-300"}
                           hover:text-blue-color  cursor-pointer py-1 items-start  transition-all duration-300
                           gap-x-4  flex justify-start px-4 border border-yellow-950 w-full` }
                             onClick={()=>{

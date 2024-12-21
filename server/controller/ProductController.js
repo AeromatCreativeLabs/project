@@ -18,8 +18,8 @@ exports.createProduct= async (req,res) =>{
         const  thumbnail = req.files.thumbnail;
         const instructions = JSON.parse(_instructions);
 
-        console.log("body is : ",req.body);
-        console.log("thumbnail is: ",thumbnail);
+        // console.log("body is : ",req.body);
+        // console.log("thumbnail is: ",thumbnail);
         if(!productName || !productDetail || !price || !whatWeWillget || !thumbnail  || !tags){
             return res.status(400).json({
                 success:false,
@@ -28,12 +28,12 @@ exports.createProduct= async (req,res) =>{
         }
         // check the instructor dont require a db call as we will get the instructor id only
         const admin_id = req.user.id;
-        console.log("admin id is: ",admin_id);
+        // console.log("admin id is: ",admin_id);
 
         // image uploading
         const imageURL = await fileAndImageUploader(thumbnail, process.env.FOLDER_NAME);
 
-        console.log("image url is : ", imageURL.secure_url);
+        // console.log("image url is : ", imageURL.secure_url);
 
         if(!imageURL){
             return res.status(404).json({
@@ -53,7 +53,7 @@ exports.createProduct= async (req,res) =>{
             tags
         });
 
-        console.log("Product created: ", response);
+        // console.log("Product created: ", response);
         // insert the product into tag
         const tagRes = await Tags.findByIdAndUpdate(tags,{
             $push:{
@@ -91,7 +91,7 @@ exports.updateProduct = async(req,res)=>{
 
           // If Thumbnail Image is found, update it
           if(req.files){
-            console.log("thumbnail update");
+            // console.log("thumbnail update");
             const thumbnail = req.files.thumbnailImage;
             const thumbnailImage = await fileAndImageUploader(thumbnail, process.env.FOLDER_NAME);
 
@@ -159,7 +159,7 @@ exports.getProductDetail = async(req,res)=>{
         
         // db call and get the detail 
         const response = await  Products.findOne({_id:productId}).populate("image").exec();
-        console.log("response: ", response);
+        // console.log("response: ", response);
 
         // return response
         return res.status(200).json({
@@ -181,7 +181,7 @@ exports.createProductImage= async(req,res)=>{
         const {product_id, title} = req.body;
         // fetch the file for video
         const image = req.files.image;
-        console.log("image is: ",req.files.image )
+        // console.log("image is: ",req.files.image )
         // validation
         if(!image || !product_id || !title ){
 
@@ -193,7 +193,7 @@ exports.createProductImage= async(req,res)=>{
         // get secured_url
         // console.log("first");
         const image_url = await fileAndImageUploader(image, process.env.FOLDER_NAME);
-        console.log("image: ", image_url.secure_url);
+        // console.log("image: ", image_url.secure_url);
         // create sub-section in db
         const productImage_id = await ProductImage.create({
             title,

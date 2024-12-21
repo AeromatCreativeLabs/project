@@ -12,14 +12,14 @@ exports.updateProfile = async(req,res)=>{
         const user_id = req.user.id;
         // fetch the data from body
         const updates = req.body;
-        console.log("user_id", updates);
+        // console.log("user_id", updates);
         
         // db call for user
         const userDetails = await User.findById(user_id);
-        console.log("userDetails", userDetails);
+        // console.log("userDetails", userDetails);
         // call the profile of the user
         const accountDetailsUser = await Profile.findById(userDetails.accountDetails);
-        console.log("first account details", accountDetailsUser);
+        // console.log("first account details", accountDetailsUser);
 
         for (const key in updates) {
             if (updates.hasOwnProperty(key)) {
@@ -31,7 +31,7 @@ exports.updateProfile = async(req,res)=>{
             }
           }
           await accountDetailsUser.save();
-        console.log("updated account details", accountDetailsUser);
+        // console.log("updated account details", accountDetailsUser);
 
 
         userDetails.accountDetails = accountDetailsUser;
@@ -94,7 +94,7 @@ exports.getAllUserDetails = async (req, res) => {
 		const userDetails = await User.findById(id)
 			.populate("accountDetails")
 			.exec();
-		console.log(userDetails);
+		// console.log(userDetails);
 		res.status(200).json({
 			success: true,
 			message: "User Data fetched successfully",

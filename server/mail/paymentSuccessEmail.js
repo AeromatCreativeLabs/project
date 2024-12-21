@@ -79,7 +79,8 @@ exports.paymentSuccessEmail = (name, result, paymentId) => {
 
                  <p><b>
                     //edit here..........
-                    // Contact Details: +91 ${phoneNumber}, <br\> address: ${address}
+                    // Contact Details: +91 7841001111, <br\> 
+                    address: B-208, Karan Suncoast, near Ryan International School, Bavdhan, Pune-411021
                  </b></p>
               </div>
               <div class="support">If you have any questions or need assistance, please feel free to reach out to us at <a

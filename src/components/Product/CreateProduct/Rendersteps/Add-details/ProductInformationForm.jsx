@@ -154,7 +154,7 @@ const ProductInformationForm = () => {
 
 
   return (
-    <form className="space-y-8 rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-6"
+    <form className="space-y-8 rounded-md border-[1px] border-gray-700 bg-gray-800 p-6"
     onSubmit={handleSubmit(onSubmit)}
     >
             {/* product title */}

@@ -25,7 +25,7 @@ export async function createCategory(token,data){
             throw new Error("Could not found any category")
         }
         result = response?.data?.data;
-        toast.success("created category successfully");
+        // toast.success("created category successfully");
     } catch (error) {
         console.log("CREATE_CATEGORY_API API ERROR............", error)
         toast.error(error.message)
@@ -49,7 +49,7 @@ export async function updateCategory(token,data){
             throw new Error("Could not updated any category")
         }
         result = response?.data?.data;
-        toast.success("updated category successfully");
+        // toast.success("updated category successfully");
     } catch (error) {
         console.log("UPDATE_CATEGORY_API API ERROR............", error)
         toast.error(error.message)
@@ -92,7 +92,7 @@ export async function getTagProduct(tagId){
             throw new Error("Could not getting any category")
         }
         result = response?.data?.data;
-        toast.success("get category successfully");
+        // toast.success("get category successfully");
     } catch (error) {
         console.log("GET_ALL_CATEGORY_API API ERROR............", error)
         toast.error(error.message)

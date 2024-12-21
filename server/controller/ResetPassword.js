@@ -18,7 +18,7 @@ exports.resetPasswordToken = async(req,res) =>{
         }
 
         const response = await User.findOne({email});
-        console.log("email", email);
+        // console.log("email", email);
 
         if(!response){
             return res.status(401).json({
@@ -61,7 +61,7 @@ exports.resetPassword = async(req,res) =>{
         // fetch the token, password,confirmpassword
         const {token, password,confirmPassword} = req.body;
         // check the token in db and validate the token
-        console.log("token", token);
+        // console.log("token", token);
 
         if(!password || !confirmPassword){
             return res.status(401).json({
@@ -79,14 +79,14 @@ exports.resetPassword = async(req,res) =>{
                 message:'Token is invalid',
             });
         }
-        console.log("response1", response);
+        // console.log("response1", response);
         if(response.resetTokenexpires < Date.now()){
             return res.status(401).json({
                 success:false,
                 message: "Link have been expired please try again",
             })
         }
-        console.log("response2", response.resetTokenexpires);
+        // console.log("response2", response.resetTokenexpires);
         // check the password and confirm password
         if(password !== confirmPassword){
             return res.status(401).json({
